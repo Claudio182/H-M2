@@ -113,6 +113,9 @@ function displayToDos() {
 
 function addToDo() {
   // Tu código acá:
+  toDoItems.push(new ToDo(toDoInput.value));
+  toDoInput.value = '';
+  displayToDos();
 }
 
 // Agregar un 'Event Listener' para que cada vez que el botón 'AGREGAR' sea clickeado
@@ -121,6 +124,8 @@ function addToDo() {
 //   2) Agregarle un 'click' event listener, pasándole la función 'addToDo' como callback
 
 // Tu código acá:
+let button = document.querySelector('#addButton');
+button.addEventListener('click', addToDo);
 
 
 // La función completeToDo se va a ejecutar cuando queramos completar un todo
@@ -137,8 +142,10 @@ function addToDo() {
 
 function completeToDo(event) {
   // DESCOMENTAR LA SIGUIENTE LINEA
-  // const index = event.target.id;
+  const index = event.target.id;
   // Tu código acá:
+  toDoItems[index].complete = true;
+  displayToDos();
 
 }
 
