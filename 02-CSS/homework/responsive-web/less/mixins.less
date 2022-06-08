@@ -1,1 +1,19 @@
 // Mixins acá
+
+.borderRadius (@borderRadius: 10px) {
+    border-radius: @borderRadius;
+}
+
+.btnRegister (@bgColor, @color, @borderColor) {
+    text-align: center;
+    background-color: @bgColor;
+    color: @color;
+    border: 1px solid @borderColor;
+    padding: 10px 20px;
+    .borderRadius(10px);
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: max-content;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}

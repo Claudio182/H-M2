@@ -1,1 +1,50 @@
-// Código de Nav acá
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .nav-logo{
+        font-family: 'Russo One', sans-serif;
+        color: @header-font-color;
+        margin: 20px 0;
+        font-size: 3.5rem;
+        text-decoration: none;
+    }
+
+    .nav-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 3em;
+        margin: 20px 0;
+
+        li a{
+            font-family: 'Ubuntu', sans-serif;
+            color: @main-font-color;
+            font-size: 1.4rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease-in-out;
+
+            &:hover{
+                color: @header-font-color;
+            }
+        }
+    }
+
+    @media @phone {
+        .nav-list{
+            gap: 1em;
+        }
+
+        .nav-list li a{
+            font-size: 1.2rem;
+        }
+    }
+}
+
+
+
+
