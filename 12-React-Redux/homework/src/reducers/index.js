@@ -1,5 +1,6 @@
 import { SEARCH_MOVIES } from "../actions/actionsTyps";
 import { ADD_FAVORITE } from "../actions/actionsTyps";
+import { REMOVE_FAVORITE } from "../actions/actionsTyps";
 import { GET_MOVIE_DETAIL } from "../actions/actionsTyps";
 import { CLEAR_STATE } from "../actions/actionsTyps";
 
@@ -26,6 +27,11 @@ export default function rootReducer (state = initialState, { type, payload }) {
         case CLEAR_STATE: return {
             ...state,
             moviesDetail: {}
+        }
+
+        case REMOVE_FAVORITE: return {
+            ...state,
+            favMovies: state.favMovies.filter(movie => movie.id !== payload)
         }
 
         default: return state;

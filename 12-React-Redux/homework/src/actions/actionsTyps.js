@@ -1,4 +1,5 @@
 export const SEARCH_MOVIES = "SEARCH_MOVIES";
 export const ADD_FAVORITE = "ADD_FAVORITE";
+export const REMOVE_FAVORITE = "REMOVE_FAVORITE";
 export const GET_MOVIE_DETAIL = "GET_MOVIE_DETAIL";
 export const CLEAR_STATE = "CLEAR_STATE";

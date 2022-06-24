@@ -16,7 +16,6 @@ class Movie extends React.Component {
 
 
     render() {
-        console.log(this.props);
         return (
             <div className="movie-detail">
                 <h2>Titulo: {this.props.moviesDetail.Title}</h2>

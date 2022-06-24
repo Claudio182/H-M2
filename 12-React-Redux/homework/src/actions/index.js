@@ -1,4 +1,4 @@
-import { SEARCH_MOVIES, ADD_FAVORITE, GET_MOVIE_DETAIL, CLEAR_STATE } from "./actionsTyps";
+import { SEARCH_MOVIES, ADD_FAVORITE, GET_MOVIE_DETAIL, CLEAR_STATE, REMOVE_FAVORITE } from "./actionsTyps";
 
 const apiKey = "368952f6";
 
@@ -28,6 +28,13 @@ export function getMovieDetail (id) {
 export function addFavorite(payload) {
     return {
         type: ADD_FAVORITE,
+        payload
+    }
+}
+
+export function removeFavorite(payload) {
+    return {
+        type: REMOVE_FAVORITE,
         payload
     }
 }
