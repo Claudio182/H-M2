@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from 'react-router-dom';
-import './Buscador.css';
-
-
+import { Link } from "react-router-dom";
+import { searchMovies, addFavorite } from "../../actions";
+import "./Buscador.css";
 
 export class Buscador extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: ""
+      title: "",
     };
   }
   handleChange(event) {
@@ -17,6 +16,7 @@ export class Buscador extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
+    this.props.searchMovies(this.state.title);
   }
 
   render() {
@@ -26,7 +26,9 @@ export class Buscador extends Component {
         <h2>Buscador</h2>
         <form className="form-container" onSubmit={(e) => this.handleSubmit(e)}>
           <div>
-            <label className="label" htmlFor="title">Película: </label>
+            <label className="label" htmlFor="title">
+              Película:{" "}
+            </label>
             <input
               type="text"
               id="title"
@@ -38,11 +40,40 @@ export class Buscador extends Component {
           <button type="submit">BUSCAR</button>
         </form>
         <ul>
-         {/* Aqui tienes que escribir tu codigo para mostrar la lista de peliculas */}
+          {this.props.movies.map((movie) => {
+            return (
+              <li key={movie.imdbID}>
+                <Link to={`/movie/${movie.imdbID}`}>{movie.Title}</Link>
+                <button
+                  onClick={() =>
+                    this.props.addFavorites({
+                      title: movie.Title,
+                      id: movie.imdbID,
+                    })
+                  }
+                >
+                  Agregar a favoritos
+                </button>
+              </li>
+            );
+          })}
         </ul>
       </div>
     );
   }
 }
 
-export default Buscador;
+function mapStateToProps(state) {
+  return {
+    movies: state.movies,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    searchMovies: (movie) => dispatch(searchMovies(movie)),
+    addFavorites: (movie) => dispatch(addFavorite(movie)),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Buscador);
