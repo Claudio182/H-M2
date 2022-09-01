@@ -112,7 +112,7 @@ function addToDo () {
     let toDoInput = document.getElementById('toDoInput')
     let entrada = new ToDo(toDoInput.value)
     toDoItems.push(entrada)
-    entrada = ''
+    toDoInput.value = ''
     displayToDos()
 }
 
