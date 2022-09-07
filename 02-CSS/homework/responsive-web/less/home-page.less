@@ -1,6 +1,5 @@
 // Conteindo del Home
 @import 'mixins.less';
-
 .home {
 
   .intro {
@@ -13,22 +12,28 @@
       padding:0 15px;
     }
 
-    .header-img {
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-      max-height: 100%;
-      margin: 0 auto;
+    img {
+      
+      max-width: 770px;
+      padding: 15px auto;
       border-radius: 20px;
     }
 
     @media @phone {
-      .header-img {
-        width: 100%;
-        padding: 0 1em;
+      h2, p, img{
+        margin: 0 0px;
+        padding: 15px 0;
+        text-align: justify;
+        max-width: 100%;
+      }
+      img {
+        max-width: 90vw;
+        margin: 0 auto;
+        padding: 0 0em;
       }
     }
   }
+
 
   .music-images {
     display: flex;
@@ -40,17 +45,12 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
     }
 
-    @media @phone {
-      .auricular {
-        width: 100%;
-        height: auto;
-        margin: 20px 2.5%;
-      }
-      .tecnologia, .ondas {
-        display: none;
-      }
+    @media screen, @phone {
+      display: flex;
+      flex-direction: column;
     }
   }
 
@@ -85,21 +85,13 @@
       }
 
       .btn {
-        .btnRegister(@bgColor: #22283B, @color: #f4f4f4, @borderColor: #121213);
-        
+        .btnRegister(@bgColor: #22283B, @color: #f4f4f4);
+
         &:hover {
-          .btnRegister(@bgColor: #f4f4f4, @color: #22283B, @borderColor: #121213);
+          background-color: #546391;
+          color: @sea-shell;
         }
-      }
-
-      @media @phone {
-        .btn {
-          width: 100%;
-
-          &:hover {
-            width: 100%;
-          }
-        }
+        
       }
     }
 
@@ -111,24 +103,6 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
-      }
-    }
-  }
-
-  @media @phone {
-    .actual {
-      flex-direction: column-reverse;
-      padding: 0 1em;
-
-      .actual-img {
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-      }
-
-      .actual-text {
-        width: 100%;
-        margin-top: 20px;
       }
     }
   }
