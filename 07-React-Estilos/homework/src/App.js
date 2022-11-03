@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Cards from './components/Cards/Cards';
-import SearchBar from './components/SerchBar/SearchBar';
+import Cards from './components/Cards';
+import SearchBar from './components/SearchBar';
 import data from './data.js';
 
 function App() {

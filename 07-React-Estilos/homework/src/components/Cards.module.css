@@ -1,0 +1,7 @@
+.content {
+    
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0;
+    margin-bottom: 50px;
+}
