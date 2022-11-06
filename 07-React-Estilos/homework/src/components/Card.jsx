@@ -1,13 +1,15 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Style from './Card.module.css'
 
-export default function Card( {onClose, img, name, min, max} ) {
+export default function Card( { cities ,onClose, img, name, min, max, key} ) {
 
     return (
         <div className={Style.content}>
             <img className={Style.bcg} src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="" />
             <button className={Style.btn} onClick={onClose}>X</button>
-            <h3 className={Style.title} >{name}</h3>
+            <NavLink to={`/ciudad/${key}`}><h3 className={Style.title} >{name}</h3> 
+            </NavLink>
             <div className={Style.subContent} >
                 <div className={Style.subDiv}>
                     <div className={Style.subSubDiv}>

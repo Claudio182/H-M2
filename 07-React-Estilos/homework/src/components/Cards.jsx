@@ -10,6 +10,7 @@ export default function Cards( { cities, onClose } ) {
             {console.log(cities)}
             {cities.length > 0 ? 
                 cities.map( (city) =>    <Card 
+                cities={cities}
                 key={city.id}
                 max={city.max}
                 min={city.min}

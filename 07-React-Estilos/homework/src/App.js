@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom'
 import './App.css';
+
 import Cards from './components/Cards';
-import SearchBar from './components/SearchBar';
+import About from './components/About'
+import Nav from './components/Nav';
+/* import Style from './components/nav.module.css' */
 /* import data from './data.js'; */
 
 function App() {
@@ -18,6 +22,7 @@ function App() {
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`)
       .then(r => r.json())
       .then((recurso) => {
+        console.log(recurso)
         if(recurso.main !== undefined){
           const ciudad = {
             min: Math.round(recurso.main.temp_min),
@@ -41,19 +46,22 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <SearchBar
-          onSearch={onSearch}
-        />
-      </div>
-      <div>
-        <Cards
-          cities={cities}
-          onClose={onClose}
-        />
-      </div>
+      
+      <Nav onSearch={onSearch}  />
+      
+      <Routes>
+        <Route 
+          path='/' 
+          element={<Cards cities={cities} onClose={onClose} />} 
+          />
+
+          <Route path='/about'  element={<About />}  />
+
+      </Routes>
     </div>
   );
 }
 
 export default App;
+/* <Cards  cities={cities} onClose={onClose}  />
+      /> */
