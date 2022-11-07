@@ -7,3 +7,11 @@
     margin: 0 10vw;
     margin-bottom: 50px;
 }
+
+.nope {
+    color: aliceblue;
+    text-shadow: 2px 1px 3px rgba(61, 0, 173, 0.692), -2px -1px 3px rgba(61, 0, 173, 0.692);
+    padding: 6px 100px;
+    background-color: rgba(0, 0, 0, 0.801);
+    border-radius: 20px;
+}

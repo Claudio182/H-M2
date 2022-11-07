@@ -7,7 +7,8 @@ p {
     flex-direction: column;
     width: 300px;
     border-radius: 8px;
-    box-shadow: 3px 2px 6px rgba(0, 235, 235, 0.568), -3px -2px 6px rgba(61, 0, 173, 0.692);
+    box-shadow: 3px 2px 6px rgba(0, 235, 235, 0.541), -3px -2px 6px rgba(42, 0, 121, 0.658);
+    backdrop-filter: blur(3.9px);
     background-color: rgba(0, 0, 0, 0.568);
     background-image:  linear-gradient(325deg, rgba(16, 77, 77, 0.507), rgba(10, 0, 26, 0.767));
     border: rgba(245, 245, 245, 0.164) outset 2px;
@@ -70,6 +71,11 @@ p {
     z-index: 7;
 }
 
+.title:hover{
+    text-decoration: none;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.521), -3px -3px 6px rgba(250, 253, 88, 0.836);
+}
+
 .img {
     border-radius: 50%;
     /* box-shadow: 10px 10px 8px #57cfff88; */
@@ -85,9 +91,9 @@ p {
     padding: 0 7px;
     border: none;
     border-radius: 50%;
-    background-color: rgba(128, 0, 0, 0.685);
+    background-color: rgba(158, 0, 0, 0.616);
     color: rgba(255, 68, 68, 0.76);
-    box-shadow: 2px 1px 3px rgba(255, 46, 46, 0.76), -2px -1px 3px rgba(252, 77, 77, 0.712);
+    box-shadow: 2px 1px 3px rgba(255, 46, 46, 0.808), -2px -1px 3px rgba(252, 77, 77, 0.938);
     
     z-index: 7;
     

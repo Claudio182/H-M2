@@ -7,7 +7,15 @@ export default function SearchBar( {onSearch} ) {
 
     function handleChange (event) {
         setTexto( estado => event.target.value)
+
+        /* const clean = (event) => event.target.value = ''
+        clean(event) */
     }
+
+    /* function clear (event) {
+        
+        setTimeout(clean(event), 0)
+    } */
 
 
     return (
@@ -15,10 +23,12 @@ export default function SearchBar( {onSearch} ) {
             <form onSubmit={(e) => {
                 e.preventDefault();
                 onSearch(texto);
+                /*  let clear =(e) => e.target.value = ''
+                clear(e) */
             }}>
                 <input className={Style.input} type="text" id='input'  placeholder='Ciudad...' onChange={ (event) => handleChange(event)} />
 
-                <input className={Style.btn} type='submit' value='Agregar'></input>
+                <input className={Style.btn}  type='submit' value='Agregar'></input>
             </form>
         </div>
     )
