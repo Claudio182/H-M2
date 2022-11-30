@@ -19,7 +19,7 @@ function Nav({ onSearch }) {
 
             <NavLink to="/about">
                 <div className={style.navAbout}>
-                    <About className={style.about} />
+                    <About />
                 </div>
             </NavLink>
 

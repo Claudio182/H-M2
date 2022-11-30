@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom'
 import './App.css';
 
-
+import Cards from './components/Cards';
 import City from './components/City'
 import About from './components/About'
 import Nav from './components/Nav';
-
+import ToDo from './components/ToDo'
 import ContentHome from './components/ContentHome';
 /* import Style from './components/nav.module.css' */
 /* import data from './data.js'; */

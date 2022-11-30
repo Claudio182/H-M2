@@ -136,6 +136,7 @@ html,
 body {
   font-family: 'Ubuntu', sans-serif;
   color: #5E6164;
+  padding: 0 5vw;
 }
 h1,
 h2,
@@ -203,8 +204,8 @@ footer {
   padding: 0 15px;
 }
 .home .intro img {
-  max-width: 770px;
-  padding: 15px auto;
+  width: 100%;
+  /* padding: 15px auto; */
   border-radius: 20px;
 }
 @media (max-width: 500px) {
@@ -225,6 +226,7 @@ footer {
 .home .music-images {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   width: 100%;
 }
 .home .music-images img {
@@ -233,10 +235,15 @@ footer {
   border-radius: 20px;
   height: 100%;
 }
-@media screen, (max-width: 500px) {
-  .home .music-images {
-    display: flex;
-    flex-direction: column;
+@media screen and (max-width: 500px) {
+  .home .music-images .tecnologia {
+    display: none;
+  }
+  .home .music-images .ondas {
+    display: none;
+  }
+  .home .music-images .auricular {
+    width: 100%;
   }
 }
 .home .musica-nueva {
@@ -281,6 +288,11 @@ footer {
 .home .actual .actual-text .btn:hover {
   background-color: #546391;
   color: #F1F1F1;
+}
+@media screen and (max-width: 500px) {
+  .home .actual .actual-text .actual {
+    flex-direction: column;
+  }
 }
 .home .actual .actual-img {
   width: 46%;

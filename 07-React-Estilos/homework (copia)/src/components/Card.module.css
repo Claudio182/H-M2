@@ -1,0 +1,100 @@
+p {
+    margin: 0;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 3px 2px 6px rgba(0, 235, 235, 0.541), -3px -2px 6px rgba(42, 0, 121, 0.658);
+    backdrop-filter: blur(3.9px);
+    background-color: rgba(0, 0, 0, 0.568);
+    background-image:  linear-gradient(325deg, rgba(16, 77, 77, 0.507), rgba(10, 0, 26, 0.767));
+    border: rgba(245, 245, 245, 0.164) outset 2px;
+    /* background-color: linear-gradient(180deg, rgba(0, 8, 24, 0.815), y rgba(0, 22, 65, 0.096)); */
+    z-index: 2;
+}
+
+.bcg {
+    display: none;
+    position: absolute;
+    width: 300px;
+    z-index: 1;
+    
+}
+
+.subContent {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    z-index: 3;
+}
+
+.subDiv {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-bottom: 0;
+    gap: 10px;
+    z-index: 4;
+}
+
+.subSubDiv {
+    width: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px inset rgba(1, 102, 102, 0.158);
+    background-color: rgba(0, 0, 0, 0.71);
+    padding: 4px 8px;
+    border-radius: 8px;
+    z-index: 5
+}
+
+.subSubDiv > p {
+    color: aliceblue;
+    padding: 5px 0;
+    text-shadow: 0.5px 0.5px 3px rgba(250, 247, 82, 0.664), -0.5px -0.5px 3px rgba(250, 247, 82, 0.63);
+}
+
+.subSubDiv :first-child {
+    text-shadow: 1px 0.5px 3px rgba(61, 0, 173, 0.692), -1px -0.5px 3px rgba(61, 0, 173, 0.692);
+}
+
+
+.title {
+    padding: 0 0 0 30px;
+    margin-bottom: 0;
+    color: rgb(255, 255, 247);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.521), -1px -1px 3px rgba(250, 253, 88, 0.836);
+    z-index: 7;
+}
+
+.title:hover{
+    text-decoration: none;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.521), -3px -3px 6px rgba(250, 253, 88, 0.836);
+}
+
+.img {
+    border-radius: 50%;
+    /* box-shadow: 10px 10px 8px #57cfff88; */
+    /* background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%); */
+    background-color: 0.5;
+    background: radial-gradient(rgba(0, 206, 206, 0.575)20%, rgba(0, 90, 90, 0.055) 65%)
+}
+
+.btn {
+    width: min-content;
+    align-self: flex-end;
+    margin: 8px 8px 0 0;
+    padding: 0 7px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(158, 0, 0, 0.616);
+    color: rgba(255, 68, 68, 0.76);
+    box-shadow: 2px 1px 3px rgba(255, 46, 46, 0.808), -2px -1px 3px rgba(252, 77, 77, 0.938);
+    
+    z-index: 7;
+    
+}
